@@ -1,0 +1,75 @@
+LinkedHashMap - it is Hashtable and Linked list implementation of the Map interface
+			  - it contains values based on the key.
+			  - it contains unique elements.
+			  - it may have one null key and multiple null values.
+			  - it is non synchronized.
+			  - it maintains insertion order.
+			  - The initial default capacity of Java HashMap class is 16 with a load factor of 0.75.
+			  - This linked list defines the iteration ordering, which is normally the order in which keys were inserted into the map (insertion-order). 
+			  - Note that insertion order is not affected if a key is re-inserted into the map.
+			  - 
+			  - 
+			  - 
+			  
+Constructor and Description
+LinkedHashMap() - Constructs an empty insertion-ordered LinkedHashMap instance with the default initial capacity (16) and load factor (0.75).
+
+LinkedHashMap(int initialCapacity) - Constructs an empty insertion-ordered LinkedHashMap instance with the specified initial capacity and a default load factor (0.75).
+
+LinkedHashMap(int initialCapacity, float loadFactor) - Constructs an empty insertion-ordered LinkedHashMap instance with the specified initial capacity and load factor.
+
+LinkedHashMap(int initialCapacity, float loadFactor, boolean accessOrder) - Constructs an empty LinkedHashMap instance with the specified initial capacity, load factor and ordering mode.
+
+LinkedHashMap(Map<? extends K,? extends V> m) - Constructs an insertion-ordered LinkedHashMap instance with the same mappings as the specified map.
+
+		
+transient java.util.LinkedHashMap$Entry<K, V> head;
+  transient java.util.LinkedHashMap$Entry<K, V> tail;
+  final boolean accessOrder;
+  void reinitialize();
+  java.util.HashMap$Node<K, V> newNode(int, K, V, java.util.HashMap$Node<K, V>);
+  java.util.HashMap$Node<K, V> replacementNode(java.util.HashMap$Node<K, V>, java.util.HashMap$Node<K, V>);
+  java.util.HashMap$TreeNode<K, V> newTreeNode(int, K, V, java.util.HashMap$Node<K, V>);
+  java.util.HashMap$TreeNode<K, V> replacementTreeNode(java.util.HashMap$Node<K, V>, java.util.HashMap$Node<K, V>);
+  void afterNodeRemoval(java.util.HashMap$Node<K, V>);
+  void afterNodeInsertion(boolean);
+  void afterNodeAccess(java.util.HashMap$Node<K, V>);
+  void internalWriteEntries(java.io.ObjectOutputStream) throws java.io.IOException;
+  public java.util.LinkedHashMap(int, float);
+  public java.util.LinkedHashMap(int);
+  public java.util.LinkedHashMap();
+  public java.util.LinkedHashMap(java.util.Map<? extends K, ? extends V>);
+  public java.util.LinkedHashMap(int, float, boolean);
+  public boolean containsValue(java.lang.Object);
+  public V get(java.lang.Object);
+  public V getOrDefault(java.lang.Object, V);
+  public void clear();
+  protected boolean removeEldestEntry(java.util.Map$Entry<K, V>);
+  public java.util.Set<K> keySet();
+  final <T> T[] keysToArray(T[]);
+  final <T> T[] valuesToArray(T[]);
+  public java.util.Collection<V> values();
+  public java.util.Set<java.util.Map$Entry<K, V>> entrySet();
+  public void forEach(java.util.function.BiConsumer<? super K, ? super V>);
+  public void replaceAll(java.util.function.BiFunction<? super K, ? super V, ? extends V>);
+
+Method and Description
+	void	clear() - Removes all of the mappings from this map.
+	
+	boolean	containsValue(Object value) - Returns true if this map maps one or more keys to the specified value.
+	
+	Set<Map.Entry<K,V>>	entrySet() - Returns a Set view of the mappings contained in this map.
+	
+	void	forEach(BiConsumer<? super K,? super V> action) - Performs the given action for each entry in this map until all entries have been processed or the action throws an exception.
+	
+	V	get(Object key) - Returns the value to which the specified key is mapped, or null if this map contains no mapping for the key.
+	
+	V	getOrDefault(Object key, V defaultValue) - Returns the value to which the specified key is mapped, or defaultValue if this map contains no mapping for the key.
+	
+	Set<K>	keySet() - Returns a Set view of the keys contained in this map.
+	
+	protected boolean	removeEldestEntry(Map.Entry<K,V> eldest) - Returns true if this map should remove its eldest entry.
+	
+	void	replaceAll(BiFunction<? super K,? super V,? extends V> function) - Replaces each entry's value with the result of invoking the given function on that entry until all entries have been processed or the function throws an exception.
+	
+	Collection<V>	values() - Returns a Collection view of the values contained in this map.	  

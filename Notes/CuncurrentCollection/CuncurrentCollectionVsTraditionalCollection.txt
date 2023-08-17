@@ -1,0 +1,49 @@
+Concurrent Vs Tradition Collection
+
+1.Thread Safety -
+	Tradition :-
+				 Most of the classic classes in Java Collections such as Array List, Linked List, Hash Map etc. are not synchronized 
+				 and are not thread safe in multi-threading environment.
+	Concurrent :- 
+				 Java introduces same classes in Concurrent Collections with implement synchronization in them which not only make these classes as Synchronized but also thread safe in nature.
+2.Locking Mechanism
+	Tradition :-
+			   We have some synchronized classes in traditional collections as well such as Vector and Stack but these classes uses lock over whole collection which reduces performance and speed of execution.
+	Concurrent :- 	
+				concurrent collections introduces concept of partial locking
+				where it locks only part of collection in case of multi-threading environment which improves the performance and speed of collections in such environment.
+				
+3.Data Inconsistency
+	Tradition :-
+			    because of no thread safety, Data inconsistency may occur 
+	Concurrent :- 	
+				because of thread safety and synchronization, there is no problem Data inconsistency
+
+4.Runtime Exception
+	Tradition :-
+			    In case of traditional collections if we try to modify a collection through separate thread during collection iteration then we got Runtime Exception ConcurrentModificationException. 
+	Concurrent :- 	
+				On other hand one would not get such exception if deals with the concurrent collections i.e. 
+				concurrent collections allows modification in collection during its iteration.
+				
+5.Preference
+	Tradition :-
+			    Due to reason mentioned in above points traditional collections are not preferred in multi-threading environment.
+	Concurrent :- 	
+				On other hand Concurrent collections are primarily preferred in multi-threading environment.
+5.Introduction in market
+	Tradition :-
+			   Traditional collections are type of legacy collection in Java and are introduced before concurrent collections.
+			    
+	Concurrent :- 	
+				While concurrent collections are introduced in JDK 1.5 i.e. are introduced after traditional collections.
+			
+**************************************************************************************************
+				
+Thread safe -
+			1. Vector,Stack,HashTable	
+			
+Concurrent - 			
+				
+***************************************************************************************************				
+in Synchronization, when a thread wants to access resource then thread acquire a lock with it self it is know as locking machi

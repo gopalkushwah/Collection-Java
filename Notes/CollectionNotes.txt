@@ -1,0 +1,124 @@
+Important topic in java for interview 
+
+1. String
+2. Exception
+3. Collection 
+4. Threading
+------------------------------------------------------------------------
+Framework :-
+set of API which works on the predefined algorithms and targeted to the specific domain
+
+What is Collection Framework :-
+
+1. The Collection in Java is a framework that provides an architecture to store and manipulate the group of objects.
+2. Java Collections can achieve all the operations that you perform on a data such as searching, sorting, insertion, manipulation, and deletion.
+3. Java Collection framework provides many interfaces (Set, List, Queue, Deque) and classes (ArrayList, Vector, LinkedList, PriorityQueue, HashSet, LinkedHashSet, TreeSet).
+
+It has:
+=> Interfaces and its implementations, i.e., classes
+=> Algorithm
+
+=> The java.util package contains all the classes and interfaces for the Collection framework.
+
+----------------------------------------------------------------
+
+Hierarchy of Collection Framework ->
+
+(interface)
+ Iterable
+	|	   (interface)	
+	=======>Collection
+				|
+				|						|=======> ArrayList  (class)
+				|						|
+				|					    |=======> LinkedList (class) >---------- LinkedList is implementing the Deque Interface
+				|	(interface)			|									 	|
+				=======>List   =======>	|=======> Vector(class)=======> Stack	|
+				|															 	|
+				|															 	|
+				|						|=======>PriorityQueue(class)			|
+				|						|									 	|
+				|	(interface)			|=======> Deque (Interface)<------------
+				=======>Queue  =======> |			|
+				|									|=======> ArrayDeque(class)
+				|
+				|						
+				|						|=======>HashSet (class)
+				|	(interface)			|
+				=======>Set    =======> |=======> LinkedHashSet (class)
+										|
+										|=======> SortedSet (Interface) =======> TreeSet (class)
+										
+----------------------------------------------------------------
+									
+Map(Interface) 
+	|
+	|=======> HashMap(class)
+	|
+	|=======> LinkedHashMap(class)
+	|
+	|
+	|=======> SortedMap (interface) ======> TreeMap(class)
+	
+----------------------------------------------------------------
+
+some more important interface
+
+iterator(Interface) 
+	|
+	|=======> ListIterator(Interface) 
+	
+Enumeration
+
+----------------------------------------------------------------
+
+comparable(Interface)
+
+comparator(Interface)
+
+----------------------------------------------------------------
+Methods of collection interface:-
+
+"Collection.java"
+
+  public abstract int size();
+  public abstract boolean isEmpty();
+  public abstract boolean contains(java.lang.Object);
+  public abstract java.util.Iterator<E> iterator();
+  public abstract java.lang.Object[] toArray();
+  public abstract <T> T[] toArray(T[]);
+  public default <T> T[] toArray(java.util.function.IntFunction<T[]>);
+  public abstract boolean add(E);
+  public abstract boolean remove(java.lang.Object);
+  public abstract boolean containsAll(java.util.Collection<?>);
+  public abstract boolean addAll(java.util.Collection<? extends E>);
+  public abstract boolean removeAll(java.util.Collection<?>);
+  public default boolean removeIf(java.util.function.Predicate<? super E>);
+  public abstract boolean retainAll(java.util.Collection<?>);
+  public abstract void clear();
+  public abstract boolean equals(java.lang.Object);
+  public abstract int hashCode();
+  public default java.util.Spliterator<E> spliterator();
+  public default java.util.stream.Stream<E> stream();
+  public default java.util.stream.Stream<E> parallelStream();
+
+-------------------------------------------------------------------
+Lets learn List Interface - go to ListNotes.txt
+
+-------------------------------------------------------------------
+Lets learn Set Interface - go to SetNotes.txt
+
+-------------------------------------------------------------------
+
+Q -> can we extend interface also  ?  
+ans -> An interface is not extended by a class; it is implemented by a class. but An interface can extend multiple interfaces.
+
+
+
+
+
+
+
+
+
+

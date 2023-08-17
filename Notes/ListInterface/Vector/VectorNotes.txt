@@ -1,0 +1,139 @@
+Vector ----> Vector is like the dynamic array which can grow or shrink its size. 
+	   ----> Its an java class 
+	   ----> it implements List Interface
+	   ----> Unlike array, we can store n-number of elements in it as there is no size limit. 
+	   ----> It is a part of Java Collection framework since Java 1.2
+	   ----> It is found in the java.util package
+	   ----> we can use all the methods of List interface here.
+	   ----> It is recommended to use the Vector class in the thread-safe implementation only
+	   ----> Vector is synchronized.
+	   ----> Java Vector contains many legacy methods that are not the part of a collections framework.	
+	   ----> The elements of Vector can be accessed using an integer index
+	   ----> the size of a Vector can be increased or decreased.
+	   
+	   ----> initial capacity of vector is 10
+	   ----> capacity increases by double 
+	   ----> 
+	   ----> it can have multiple null values
+	   ----> 
+	   ----> 
+	
+what does the tread-safe mean : 
+	Threadsafe means that an object's state doesn't change if simultaneously multiple threads try to access the object.   
+	Synchronization is the easiest and most widely used tool for thread safety in java.
+
+Methods of Vector
+  protected java.lang.Object[] elementData;
+  protected int elementCount;
+  protected int capacityIncrement;
+  public java.util.Vector(int, int);
+  public java.util.Vector(int);
+  public java.util.Vector();
+  public java.util.Vector(java.util.Collection<? extends E>);
+  public synchronized void copyInto(java.lang.Object[]);
+  public synchronized void trimToSize();
+  public synchronized void ensureCapacity(int);
+  public synchronized void setSize(int);
+  public synchronized int capacity();
+  public synchronized int size();
+  public synchronized boolean isEmpty();
+  public java.util.Enumeration<E> elements();
+  public boolean contains(java.lang.Object);
+  public int indexOf(java.lang.Object);
+  public synchronized int indexOf(java.lang.Object, int);
+  public synchronized int lastIndexOf(java.lang.Object);
+  public synchronized int lastIndexOf(java.lang.Object, int);
+  public synchronized E elementAt(int);
+  public synchronized E firstElement();
+  public synchronized E lastElement();
+  public synchronized void setElementAt(E, int);
+  public synchronized void removeElementAt(int);
+  public synchronized void insertElementAt(E, int);
+  public synchronized void addElement(E);
+  public synchronized boolean removeElement(java.lang.Object);
+  public synchronized void removeAllElements();
+  public synchronized java.lang.Object clone();
+  public synchronized java.lang.Object[] toArray();
+  public synchronized <T> T[] toArray(T[]);
+  E elementData(int);
+  static <E> E elementAt(java.lang.Object[], int);
+  public synchronized E get(int);
+  public synchronized E set(int, E);
+  public synchronized boolean add(E);
+  public boolean remove(java.lang.Object);
+  public void add(int, E);
+  public synchronized E remove(int);
+  public void clear();
+  public synchronized boolean containsAll(java.util.Collection<?>);
+  public boolean addAll(java.util.Collection<? extends E>);
+  public boolean removeAll(java.util.Collection<?>);
+  public boolean retainAll(java.util.Collection<?>);
+  public boolean removeIf(java.util.function.Predicate<? super E>);
+  public synchronized boolean addAll(int, java.util.Collection<? extends E>);
+  public synchronized boolean equals(java.lang.Object);
+  public synchronized int hashCode();
+  public synchronized java.lang.String toString();
+  public synchronized java.util.List<E> subList(int, int);
+  protected synchronized void removeRange(int, int);
+  public synchronized java.util.ListIterator<E> listIterator(int);
+  public synchronized java.util.ListIterator<E> listIterator();
+  public synchronized java.util.Iterator<E> iterator();
+  public synchronized void forEach(java.util.function.Consumer<? super E>);
+  public synchronized void replaceAll(java.util.function.UnaryOperator<E>);
+  public synchronized void sort(java.util.Comparator<? super E>);
+  public java.util.Spliterator<E> spliterator();
+  void checkInvariants();
+  
+  
+  add()--->
+  it is used to add new data into an Vector 
+  if we want to add new data inside an Vector then it shift data by one index
+  
+  set()--->
+  it is used to add new data into an Vector at given position
+  it remove the data from the given index and then insert a new one
+  
+  
+  
+  ===============================================================================
+  VectorEx1 ---> read about constructor of vector and add method
+  			---> it has 4 constructor
+  ===============================================================================
+  VectorEx2 ---> read about Generic Collection
+  				it helps to store the data only of a single type
+  ===============================================================================
+  VectorEx3 ---> read about all the methods
+  ===============================================================================
+  VectorEx4 ---> iterate the ArrayList
+				   ---> for
+				   ---> for each loop
+				   ---> forEach method
+				   ---> Iterator
+				   ---> Enumeration
+  			   	   ---> List Iterator
+  ===============================================================================
+			   
+  ===============================================================================
+  
+ 
+  
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	

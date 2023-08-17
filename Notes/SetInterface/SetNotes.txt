@@ -1,0 +1,49 @@
+Set :-
+	* The set is an interface available in the java.util package
+	* The set interface extends the Collection interface.
+	* its a collection that contains no duplicate elements
+	* sets contain no pair of elements e1 and e2 such that e1.equals(e2)
+	* at most one null element only.
+	* 
+	
+	* no indexing ***
+	* no duplicate value ***
+	* 
+	* 
+	
+Methods of Set Interface
+
+  public abstract int size();
+  public abstract boolean isEmpty();
+  public abstract boolean contains(java.lang.Object);
+  public abstract java.util.Iterator<E> iterator();
+  public abstract java.lang.Object[] toArray();
+  public abstract <T> T[] toArray(T[]);
+  public abstract boolean add(E);
+  public abstract boolean remove(java.lang.Object);
+  public abstract boolean containsAll(java.util.Collection<?>);
+  public abstract boolean addAll(java.util.Collection<? extends E>);
+  public abstract boolean retainAll(java.util.Collection<?>);
+  public abstract boolean removeAll(java.util.Collection<?>);
+  public abstract void clear();
+  public abstract boolean equals(java.lang.Object);
+  public abstract int hashCode();
+  public default java.util.Spliterator<E> spliterator();
+  public static <E> java.util.Set<E> of();
+  public static <E> java.util.Set<E> of(E);
+  public static <E> java.util.Set<E> of(E, E);
+  public static <E> java.util.Set<E> of(E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E, E, E, E, E, E, E, E, E, E);
+  public static <E> java.util.Set<E> of(E...);
+  public static <E> java.util.Set<E> copyOf(java.util.Collection<? extends E>);
+
+  
+  
+  
+  

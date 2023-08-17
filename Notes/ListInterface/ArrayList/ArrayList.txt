@@ -1,0 +1,140 @@
+-> ArrayList is an class which implements List Interface
+-> All Implemented Interfaces: Serializable, Cloneable, Iterable<E>, Collection<E>, List<E>, RandomAccess
+
+-> Resizable-array implementation of the List interface. 
+-> Implements all optional list operations, and permits all elements, including null. 
+-> In addition to implementing the List interface, this class provides methods to manipulate the size of the array that is used internally to store the list. 
+-> (This class is roughly equivalent to Vector, except that it is unsynchronized.)
+
+-> initial capacity is 10
+-> Each ArrayList instance has a capacity. 
+-> The capacity is the size of the array used to store the elements in the list. 
+-> when reaches upto (10)capacity it increases by half of it current capacity
+
+-> it follows insertion order          ******
+-> it allows duplicate elements        ******
+-> it is indexing based
+-> 
+-> it can have multiple null values
+
+methods of ArrayList class
+"ArrayList.java"
+
+  transient java.lang.Object[] elementData;
+  public java.util.ArrayList(int);
+  public java.util.ArrayList();
+  public java.util.ArrayList(java.util.Collection<? extends E>);
+  public void trimToSize();
+  public void ensureCapacity(int);
+  public int size();
+  public boolean isEmpty();
+  public boolean contains(java.lang.Object);
+  public int indexOf(java.lang.Object);
+  int indexOfRange(java.lang.Object, int, int);
+  public int lastIndexOf(java.lang.Object);
+  int lastIndexOfRange(java.lang.Object, int, int);
+  public java.lang.Object clone();
+  public java.lang.Object[] toArray();
+  public <T> T[] toArray(T[]);
+  E elementData(int);
+  static <E> E elementAt(java.lang.Object[], int);
+  public E get(int);
+  public E set(int, E);
+  public boolean add(E);
+  public void add(int, E);
+  public E remove(int);
+  public boolean equals(java.lang.Object);
+  boolean equalsRange(java.util.List<?>, int, int);
+  public int hashCode();
+  int hashCodeRange(int, int);
+  public boolean remove(java.lang.Object);
+  public void clear();
+  public boolean addAll(java.util.Collection<? extends E>);
+  public boolean addAll(int, java.util.Collection<? extends E>);
+  protected void removeRange(int, int);
+  public boolean removeAll(java.util.Collection<?>);
+  public boolean retainAll(java.util.Collection<?>);
+  boolean batchRemove(java.util.Collection<?>, boolean, int, int);
+  public java.util.ListIterator<E> listIterator(int);
+  public java.util.ListIterator<E> listIterator();
+  public java.util.Iterator<E> iterator();
+  public java.util.List<E> subList(int, int);
+  public void forEach(java.util.function.Consumer<? super E>);
+  public java.util.Spliterator<E> spliterator();
+  public boolean removeIf(java.util.function.Predicate<? super E>);
+  boolean removeIf(java.util.function.Predicate<? super E>, int, int);
+  public void replaceAll(java.util.function.UnaryOperator<E>);
+  public void sort(java.util.Comparator<? super E>);
+  void checkInvariants();
+  static {};
+  
+  add()--->
+  it is used to add new data into an ArrayList 
+  if we want to add new data inside an ArrayList then it shift data by one index
+  
+  set()--->
+  it is used to add new data into an ArrayList at given position
+  it remove the data from the given index and then insert a new one
+  
+  
+  isEmpty()--->
+  it checks whether the collection is empty or not
+  if collection is empty the it returns true
+  
+  size()--->
+  it checks that how many data does collection currently have
+  it returns integer value
+  
+  contains()---->
+  it checks that the collection does have the given value or not
+  if yes then return true otherwise false
+  
+  get()---->
+  it retrieve the given index value
+  
+  ===============================================================================
+  ArrayListEx1 ---> read about constructor of ArrayList and add method
+  ===============================================================================
+  ArrayListEx2 ---> read about Generic Collection
+  it helps to store the data only of a single type
+  ===============================================================================
+  ArrayListEx3 ---> read about all the methods
+  ===============================================================================
+  ArrayListEx4 ---> iterate the ArrayList
+				   ---> for
+				   ---> for each loop
+				   ---> forEach method
+				   ---> Iterator
+				   ---> Enumeration
+  			   	   ---> List Iterator
+  ===============================================================================
+			   
+  ===============================================================================
+  
+  ===============================================================================
+  ways to traverse the element from the collection :
+  ->for
+  ->for each loop
+  ->forEach method
+  
+  ->Iterator ---> it can traverse all the collection frameworks
+  				  it comes from java.util package
+  				  Returns an iterator over the elements in this list in proper sequence.
+  				  its an Interface
+  				  it can iterate in only forward direction
+  				  it has -- hasNext method which check if the collection contains the element or not
+  				  			next method which is used to get next element from the collection
+  				  
+  ->List Iterator : it comes from the List interface
+  					it can iterate in both direction (forward and backward)
+  					Its an child interface of iterator interface
+  					it has all the features of iterator and some more additional features
+  					
+  ->Enumeration : it is used to traverse only legacy collections
+  				  it can iterate in only forward direction
+  				  it has -- hasMoreElements method which check if the collection contains the element or not
+  				  			nextElement method which is used to get next element from the collection
+  				  			
+  				  			
+  
+  				  

@@ -1,0 +1,50 @@
+Stack :- The Stack class represents a last-in-first-out (LIFO) stack of objects.
+		-> It extends class Vector with five operations that allow a vector to be treated as a stack. 
+		-> It is called as stack because it behaves like a real-world stack, piles of books, 
+		
+		-> we can implement all the method of vector on stack because stack extends the vector class
+		
+		-> its initial capacity is 10
+		-> its capacity increases by double of its current capacity
+		
+		-> it follows insertion order          ******
+		-> it allows duplicate elements        ******
+		-> it is indexing based
+		
+		-> it can have multiple null values
+
+
+**************************************************************************
+Methods of Stack 
+
+  public java.util.Stack();
+  public E push(E);
+  public synchronized E pop();
+  public synchronized E peek();
+  public boolean empty();
+  public synchronized int search(java.lang.Object);
+**************************************************************************
+
+Constructor of Stack
+
+Stack()
+Creates an empty Stack.
+**************************************************************************
+
+empty()----> Tests if this stack is empty.
+
+peek() ----> Looks at the object at the top of this stack without removing it from the stack.
+
+pop() ----> Removes the object at the top of this stack and returns that object as the value of this function.
+
+push(E e) ----> Pushes an item onto the top of this stack.
+
+search(Object o) ----> Returns the 1-based position where an object is on this stack.
+
+**************************************************************************
+Learn about all the methods ===> StackEx1
+**************************************************************************
+Learn about all the iterator ===> StackEx2
+**************************************************************************
+**************************************************************************
+**************************************************************************
